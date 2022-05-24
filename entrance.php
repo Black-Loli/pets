@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,9 +21,14 @@
                 <img src="pet-house.png">
                 <h1>ПетроЛап</h1>
             </div>
-            <form action="en">
-                <input type="email" name="email_phone" placeholder="Email или телефон" required=""/>
+            <form action="loginHandler.php" method="post">
+                <input type="text" name="email_phone" placeholder="Email или телефон" required=""/>
                 <input type="password" name="password" placeholder="Пароль" required="" minlength="6" maxlength="12"/>
+                <h3>
+                    <?php
+                    echo $_SESSION['MESSAGE'] ?? "";
+                    ?>
+                </h3>
                 <button id="entrance" type="submit" class="btn"> Войти </button>
                 <a href="registration.php" class="reg"> Регистрация </a>
             </form>

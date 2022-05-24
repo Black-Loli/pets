@@ -1,4 +1,5 @@
 <?php
+session_start();
 $bdName = 'pets_base';
 $bdUser = 'dana';
 $bdPass = 'oA7hX0yX7g';

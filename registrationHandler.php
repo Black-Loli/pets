@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'bd_connection.php';
 echo json_encode($_POST, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
