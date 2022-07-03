@@ -16,12 +16,12 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="top_menu">
+<div class="top_menu menu">
     <div class="logotype">
         <img src="pet-house.png">
         <h1>ПетроЛап</h1>
     </div>
-
+    <a class="button_entrance"> Выйти </a>
 </div>
 <div class="left_menu">
     <div class="person">
@@ -35,10 +35,10 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
 
     </div>
     <ul>
-        <li>dvfnkl</li>
-        <li>bjdvblvd</li>
-        <li>dbjvbjdvdl</li>
-        <li>kbfvhj djhbdbk</li>
+        <li>Заказы</li>
+        <li>Карточки питомцев</li>
+        <li>Чат с менеджером</li>
+        <li>Настройки аккаунта</li>
     </ul>
 </div>
 

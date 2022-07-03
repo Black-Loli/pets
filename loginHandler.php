@@ -4,7 +4,6 @@ include 'bd_connection.php';
 echo json_encode($_POST, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
 try {
-//    $query = $bdmr->prepare("UPDATE Users SET Name=?, Surname=?, Type=?, Login=?, Password=?")>exec();
     $userQuery = $bd->prepare("SELECT * FROM Users WHERE (Phone_number=? OR email=?) AND Password=?");
     $userQuery->execute([$_POST['email_phone'], $_POST['email_phone'], $_POST['password']]);
     $users = $userQuery->fetchAll(PDO::FETCH_OBJ);
@@ -16,9 +15,16 @@ try {
         $_SESSION['MESSAGE'] = "";
         $_SESSION['user_name'] = $users[0]->name;
         $_SESSION['user_id'] = $users[0]->ID;
+        $_SESSION['user_type'] = $users[0]->type;
 
-        header("Location: personal_account.php");
-        //найден
+        if ($_SESSION['user_type'] == 1) {
+            header("Location: personal_account_pet.php");
+        } else if ($_SESSION['user_type'] == 2){
+            header("Location: personal_account_executor.php");
+        } else {
+            header("Location: personal_account_admin.php");
+        }
+
     }
 } catch (PDOException $e) {
     echo $e->getMessage();

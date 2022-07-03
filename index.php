@@ -18,7 +18,7 @@ session_start();
         <img src="pet-house.png">
         <h1>ПетроЛап</h1>
     </div>
-    <a href="entrance.php" id="entrance" class="button_entrance"> Войти </a>
+    <a href="entrance.php" class="button_entrance"> Войти </a>
 </div>
 
 <div class="main">

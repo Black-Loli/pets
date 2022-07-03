@@ -51,12 +51,6 @@ session_start();
 <script src="jquery.min.js"></script>
 <script>
 
-    $('.selector').click(function (event) {
-        console.log(event.target.id)
-        $('.tab-content .active').removeClass('active');
-        $('.tab-content').children(`#${event.target.id}_content`).addClass('active');
-    });
-
     function passwordEqualityCheck() {
         var passw = $("#pass1")
         var passwo = $("#pass2")
