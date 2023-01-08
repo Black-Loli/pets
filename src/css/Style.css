@@ -29,6 +29,18 @@ div.main {
     position: relative;
 }
 
+div.main_lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #E1E1E1;
+    /*border-radius: 50%;*/
+    border-radius: 0px 0px 50% 50%;
+    /*width: 2071px;*/
+    margin-bottom: 50px;
+}
+
 div.modal {
     width: 50%;
     padding: 40px 40px 30px;
@@ -76,11 +88,11 @@ button.btn, a.reg, .button_entrance {
     color: #006270;
 }
 
-.button_entrance{
+.button_entrance {
     padding: 10px 15px;
 }
 
-.menu{
+.menu {
     position: absolute;
     left: 0;
     top: 0;
@@ -88,33 +100,271 @@ button.btn, a.reg, .button_entrance {
 
 button.btn:hover,
 input:hover,
-a.reg:hover{
+a.reg:hover {
     cursor: pointer;
     background: rgba(0, 98, 112, 0.2);
 }
 
-.button_entrance:hover{
+.button_entrance:hover {
     cursor: pointer;
     background: rgb(0 186 173);
 }
 
 input:focus,
 a.reg:focus,
-.button_entrance:focus{
+.button_entrance:focus {
     box-shadow: 0 0 0.9rem 0.1rem rgba(0, 98, 112, 0.5);
 }
 
-.error{
+.error {
     outline: 0;
     color: #212529;
     box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.48);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.top_menu{
+.navbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 1324px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    padding: 30px 50px;
+}
+
+.navbar .logotype {
+    margin-right: 20px;
+}
+
+.navbar .logotype h1 {
+    font-size: 36px;
+    color: #009394;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    color: #000000;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0;
+}
+
+.navbar ul li {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+
+.navbar ul li:hover {
+    background: #009394;
+    color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px 3px rgba(33, 37, 41, 0.5);
+}
+
+.navbar ul li:hover a {
+    cursor: pointer;
+}
+
+.navbar .cont_entr {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.navbar .cont_entr .number {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 20px;
+}
+
+.navbar .cont_entr .number h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.navbar .cont_entr .number h5 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.navbar .cont_entr a {
+    padding: 10px 20px;
+    background: black;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    border-radius: 20px;
+    height: 44px;
+    cursor: pointer;
+}
+
+.navbar .cont_entr a:hover {
+    box-shadow: 3px 3px 10px 3px rgba(33, 37, 41, 0.5);
+    transform: scale(1.05);
+}
+
+div.container {
+    width: 1324px;
+    background: #FFFFFF;
+    padding: 60px 50px 20px 77px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 50px 50px;
+}
+
+div.container .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+div.container .btn {
+    display: flex;
+    margin: 50px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+div.container .text {
+    display: flex;
+    flex-direction: column;
+}
+
+div.container .text svg {
+    margin: 10px 0 10px 100px;
+}
+
+div.container .text h1:nth-child(even) {
+    text-indent: 100px;
+}
+
+div.container .text h1:nth-child(1),
+div.container .text h1:nth-child(2) {
+    font-size: 48px;
+    padding: 10px 0;
+    color: black;
+}
+
+div.container .text h1:nth-child(3),
+div.container .text h1:nth-child(4) {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    padding: 13px 0;
+    color: black;
+}
+
+div.container .btn h3 {
+    color: #FFFFFF;
+    height: 90px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 24px 98px 24px 36px;
+    border-radius: 50px;
+    background: linear-gradient(87.02deg, #00E0C7 0%, #009394 34.72%, #009394 79.59%);
+    display: flex;
+    align-items: center;
+}
+
+div.container .btn button {
+    width: 300px;
+    height: 90px;
+    background: #232323;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: -80px;
+    z-index: 100;
+}
+
+div.container .btn button a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+div.container .btn img {
+    width: 110px;
+    height: 110px;
+    margin-left: -85px;
+}
+
+.pluses {
+    width: 1324px;
+    display: flex;
+    margin: 40px 0 150px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pluses div{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.pluses .white {
+    background: #FFFFFF;
+    color: #009394;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.pluses div svg {
+    margin-bottom: 20px;
+}
+
+.pluses .white:nth-child(3) svg {
+    margin-bottom: 25px;
+}
+
+.pluses .green {
+    background: #009394;
+    margin: 0 -40px;
+    z-index: 100;
+    color: #FFFFFF;
+}
+
+.pluses div h3{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.top_menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -125,52 +375,52 @@ a{
     z-index: 10;
 }
 
-.d-none{
+.d-none {
     display: none;
 }
 
-.logo svg{
+.logo svg {
     fill: #006270;
 }
 
-.logotype svg{
+.logotype svg {
     margin: 0 10px 0 20px;
     fill: #006270;
 }
 
-.logo h1{
+.logo h1 {
     font-size: 60px;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
     padding: 0 0 20px;
 }
 
-.logotype{
+.logotype {
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
 }
 
-.logotype img{
+.logotype img {
     width: 90px;
     margin: 0 20px;
 }
 
-.logotype h1{
+.logotype h1 {
     font-size: 50px;
 }
 
-.logotype{
+.logotype {
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
 }
 
-.left_menu{
+.left_menu {
     width: 400px;
     height: 100vh;
     background: #00E0C7;
@@ -178,22 +428,22 @@ a{
     z-index: 5;
 }
 
-.left_menu ul li p{
+.left_menu ul li p {
     cursor: pointer;
 }
 
-.person{
+.person {
     padding-top: 150px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.person h1, li{
+.person h1, li {
     font-size: 30px;
 }
 
-.person svg{
+.person svg {
     fill: #006270;
 }
 
@@ -201,19 +451,19 @@ a{
 /*    width: 80px;*/
 /*}*/
 
-ul{
+ul {
     padding: 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-li{
+li {
     width: 100%;
     padding: 30px 0;
     text-align: center;
 }
 
-li:hover{
+li:hover {
     background: rgba(0, 98, 112, 0.15);
 }
