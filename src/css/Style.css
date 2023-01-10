@@ -242,7 +242,7 @@ a {
     justify-content: center;
 }
 
-.main_lg div.container .btn button:hover ~ img {
+.main_lg div.container .btn div:hover ~ img {
     animation-name: animate;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -261,7 +261,7 @@ a {
 
 hr{
     width: 50%;
-    border: 2px solid #009394;
+    border: 2px solid #00E0C7;
     border-bottom-width: 0;
     margin: 0 auto;
 }
@@ -299,6 +299,7 @@ div.container h4{
 
 div.container div.stages{
     width: 100%;
+    margin: 30px 0;
     display: flex;
     justify-content: space-around;
 }
@@ -318,10 +319,6 @@ div.container div.stages div{
     justify-content: center;
 }
 
-div.container div.stages div h3{
-
-}
-
 div.container div.stages div.training{
     background-image: url("/src/img/training.png");
 }
@@ -332,6 +329,77 @@ div.container div.stages div.trial{
 
 div.container div.stages div.equipment{
     background-image: url("/src/img/equipment.png");
+}
+
+div.container .row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 30px 0;
+}
+
+div.container .row .col-1,
+div.container .row .col-2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+div.container .row .col-1{
+    justify-content: space-evenly;
+}
+
+div.container .row .col-1 div,
+div.container .row .col-2 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 360px;
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    margin-bottom: 40px;
+}
+
+div.container .row .col-1 div{
+
+}
+
+div.container button{
+    font-family: 'Source Sans Pro', sans-serif;
+    background: linear-gradient(87.02deg, #00E0C7 0%, #009394 34.72%, #009394 79.59%);
+    height: 90px;
+    width: 316px;
+    border: 0;
+    border-radius: 50px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 31px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+}
+
+div.container .row .col-1 div h3,
+div.container .row .col-2 div h3{
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    /*font-style: normal;*/
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31px;
+    padding: 10px 0;
+}
+
+div.container .row .col-1 div h4,
+div.container .row .col-2 div h4{
+    text-align: left;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 5px 0;
+    margin: 0;
 }
 
 div.reasons .row{
@@ -423,7 +491,7 @@ div.header .text h1:nth-child(4) {
     align-items: center;
 }
 
-.main_lg div.container .btn button {
+.main_lg div.container .btn div {
     width: 300px;
     height: 90px;
     background: #232323;
@@ -435,7 +503,7 @@ div.header .text h1:nth-child(4) {
     z-index: 100;
 }
 
-.main_lg div.container .btn button a {
+.main_lg div.container .btn div a {
     font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -444,6 +512,10 @@ div.header .text h1:nth-child(4) {
     display: flex;
     align-items: center;
     color: #FFFFFF;
+}
+
+.main_lg div.container .btn div:hover{
+    cursor: pointer;
 }
 
 .main_lg div.container .btn img {
