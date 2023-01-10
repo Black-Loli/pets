@@ -80,13 +80,13 @@ session_start();
 
         <div class="btn">
             <h3>Скидка на первый заказ 50%</h3>
-            <button>
+            <div>
                 <a>Получить консультацию</a>
                 <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.3276 8.70711C17.7181 8.31658 17.7181 7.68342 17.3276 7.29289L10.9636 0.928932C10.5731 0.538408 9.93995 0.538408 9.54943 0.928932C9.15891 1.31946 9.15891 1.95262 9.54943 2.34315L15.2063 8L9.54943 13.6569C9.15891 14.0474 9.15891 14.6805 9.54943 15.0711C9.93995 15.4616 10.5731 15.4616 10.9636 15.0711L17.3276 8.70711ZM1.98799e-10 9L16.6205 9L16.6205 7L-1.98799e-10 7L1.98799e-10 9Z"
                           fill="white"/>
                 </svg>
-            </button>
+            </div>
             <img src="src/img/Без-имени-1.png">
         </div>
     </div>
@@ -215,6 +215,55 @@ session_start();
           stroke="#00E0C7" stroke-width="2"/>
 </svg>
 
+<div class="container">
+    <h2>Предоставляем 5 услуги по всем видам питомцев</h2>
+    <h4>Вы можете самостоятельно рассчитать стоимость желаемой услуги</h4>
+    <div class="row">
+        <div class="col-1">
+            <div>
+                <img src="/src/img/div.png">
+                <h3>Выгул от 200р</h3>
+                <h4>Погуляем с вашей собакой 20, 40 или 60 минут</h4>
+            </div>
+
+            <div>
+                <img src="/src/img/div-2.png">
+                <h3>Котоконтроль от 150р</h3>
+                <h4>Навестим вашего котика для уборки и небольшой игры с ним</h4>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div>
+                <img src="/src/img/div-1.png">
+                <h3>Няня от 200р</h3>
+                <h4>Посидим в вашим питомцем от 1 до 12 часов</h4>
+            </div>
+
+            <div>
+                <img src="/src/img/div-3.png">
+                <h3>Ситтинг у вас дома от 400р</h3>
+                <h4>Посидим у вас дома с питомцем</h4>
+            </div>
+
+            <div>
+                <img src="/src/img/div-4.png">
+                <h3>Ситтинг у исполнителя дома от 500р</h3>
+                <h4>Заберём питомца к себе домой</h4>
+            </div>
+        </div>
+    </div>
+
+    <button> Рассчитать стоимость </button>
+</div>
+
+<hr>
+
+<svg viewBox="0 0 1440 150" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 1C0 1 185.63 105.458 454.521 53.2292C723.412 1 732.296 140.355 612.068 140.355C491.841 140.355 673.797 -5.34565 935.863 34.9454C1122.84 63.6919 1334.57 36.965 1351.2 34.9454C1388.05 30.4686 1440 1 1440 2"
+          stroke="#00E0C7" stroke-width="2"/>
+</svg>
+
 <div class="reasons">
     <h2> 6 причин обратиться к нам </h2>
     <div class="row">
@@ -282,6 +331,40 @@ session_start();
 
 <div>
 
+</div>
+
+<svg viewBox="0 0 1440 150" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 1C0 1 185.63 105.458 454.521 53.2292C723.412 1 732.296 140.355 612.068 140.355C491.841 140.355 673.797 -5.34565 935.863 34.9454C1122.84 63.6919 1334.57 36.965 1351.2 34.9454C1388.05 30.4686 1440 1 1440 2"
+          stroke="#00E0C7" stroke-width="2"/>
+</svg>
+
+<div class="container">
+    <h2>Наша команда</h2>
+    <div class="team">
+        <div class="human">
+            <img src="/src/img/people.png">
+            <h3>Мария</h3>
+            <h4>Менеджер</h4>
+        </div>
+
+        <div class="human">
+            <img src="/src/img/people1.png">
+            <h3>Дмитрий</h3>
+            <h4>Выгульщик</h4>
+        </div>
+
+        <div class="human">
+            <img src="/src/img/people2.png">
+            <h3>Екатерина</h3>
+            <h4>Котоняня</h4>
+        </div>
+
+        <div class="human">
+            <img src="/src/img/people3.png">
+            <h3>Адель</h3>
+            <h4>Выгульщик и ситтер</h4>
+        </div>
+    </div>
 </div>
 
 </body>
