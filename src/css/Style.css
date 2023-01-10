@@ -276,6 +276,15 @@ div.container {
     align-items: center;
 }
 
+div.container_map {
+    padding: 60px 0;
+    width: 1324px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 div.reasons h2,
 div.container h2{
     color: #000000;
@@ -382,6 +391,10 @@ div.container button{
     line-height: 31px;
     color: #FFFFFF;
     margin-bottom: 50px;
+}
+
+div.container button:hover{
+    cursor: pointer;
 }
 
 div.container .row .col-1 div h3,
@@ -711,4 +724,67 @@ li {
 
 li:hover {
     background: rgba(0, 98, 112, 0.15);
+}
+
+div.footer{
+    display: flex;
+    align-items: center;
+    width: 1324px;
+    margin: 0 auto;
+    padding: 30px 50px;
+    flex-direction: column;
+}
+
+div.footer .logotype {
+    margin-right: 20px;
+}
+
+div.footer .logotype h1 {
+    font-size: 36px;
+    color: #009394;
+}
+
+div.footer .cont_logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+div.footer .number {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 20px;
+}
+
+div.footer .number h3 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 34px;
+    margin-bottom: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+div.footer .icon{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.footer .icon a{
+    margin: 0;
+}
+
+div.footer a{
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: black;
+    margin: 40px 0 50px;
 }
