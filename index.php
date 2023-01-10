@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title> Главна </title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/src/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="src/css/Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -188,6 +188,24 @@ session_start();
                       fill="#009394"/>
             </svg>
             <h3>Гарантия <br>обучения <br>работников</h3>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2> Наши исполнители проходят обучение и повышают свою квалификацию </h2>
+    <h4>Также у нас разработана экипировка вместе с кинологами</h4>
+    <div class="stages">
+        <div class="training">
+            <h3>Обучение</h3>
+        </div>
+
+        <div class="trial">
+            <h3>Пробные выгулы с наставниками</h3>
+        </div>
+
+        <div class="equipment">
+            <h3>Экипировка</h3>
         </div>
     </div>
 </div>

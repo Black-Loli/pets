@@ -219,7 +219,7 @@ a {
     transform: scale(1.05);
 }
 
-div.container {
+.main_lg div.container {
     width: 1324px;
     background: #FFFFFF;
     padding: 60px 50px 20px 77px;
@@ -228,21 +228,21 @@ div.container {
     border-radius: 0 0 50px 50px;
 }
 
-div.container .header {
+.main_lg div.container .header {
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
 }
 
-div.container .btn {
+.main_lg div.container .btn {
     display: flex;
     margin: 50px 0;
     align-items: center;
     justify-content: center;
 }
 
-div.container .btn button:hover ~ img {
+.main_lg div.container .btn button:hover ~ img {
     animation-name: animate;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -266,7 +266,8 @@ hr{
     margin: 0 auto;
 }
 
-div.reasons{
+div.reasons,
+div.container {
     padding: 60px 0;
     width: 1324px;
     margin: 0 auto;
@@ -275,12 +276,62 @@ div.reasons{
     align-items: center;
 }
 
-div.reasons h2{
+div.reasons h2,
+div.container h2{
     color: #000000;
     font-size: 40px;
     font-family: 'Philosopher',Arial,sans-serif;
     font-weight: 700;
     margin-bottom: 50px;
+    text-align: center;
+}
+
+div.container h4{
+    color: #000000;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+div.container div.stages{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.container div.stages div{
+    width: 360px;
+    height: 320px;
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+div.container div.stages div h3{
+
+}
+
+div.container div.stages div.training{
+    background-image: url("/src/img/training.png");
+}
+
+div.container div.stages div.trial{
+    background-image: url("/src/img/trial.png");
+}
+
+div.container div.stages div.equipment{
+    background-image: url("/src/img/equipment.png");
 }
 
 div.reasons .row{
@@ -331,28 +382,28 @@ div.reasons .row .col-2 div h4{
     line-height: 28px;
 }
 
-div.container .text {
+div.header .text {
     display: flex;
     flex-direction: column;
 }
 
-div.container .text svg {
+div.header .text svg {
     margin: 10px 0 10px 100px;
 }
 
-div.container .text h1:nth-child(even) {
+div.header .text h1:nth-child(even) {
     text-indent: 100px;
 }
 
-div.container .text h1:nth-child(1),
-div.container .text h1:nth-child(2) {
+div.header .text h1:nth-child(1),
+div.header .text h1:nth-child(2) {
     font-size: 48px;
     padding: 10px 0;
     color: black;
 }
 
-div.container .text h1:nth-child(3),
-div.container .text h1:nth-child(4) {
+div.header .text h1:nth-child(3),
+div.header .text h1:nth-child(4) {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     font-size: 32px;
@@ -361,7 +412,7 @@ div.container .text h1:nth-child(4) {
     color: black;
 }
 
-div.container .btn h3 {
+.main_lg div.container .btn h3 {
     color: #FFFFFF;
     height: 90px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -372,7 +423,7 @@ div.container .btn h3 {
     align-items: center;
 }
 
-div.container .btn button {
+.main_lg div.container .btn button {
     width: 300px;
     height: 90px;
     background: #232323;
@@ -384,7 +435,7 @@ div.container .btn button {
     z-index: 100;
 }
 
-div.container .btn button a {
+.main_lg div.container .btn button a {
     font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -395,7 +446,7 @@ div.container .btn button a {
     color: #FFFFFF;
 }
 
-div.container .btn img {
+.main_lg div.container .btn img {
     width: 130px;
     height: 130px;
     margin-left: -100px;
