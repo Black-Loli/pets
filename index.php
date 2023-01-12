@@ -373,8 +373,10 @@ session_start();
 </svg>
 
 <div class="container_map">
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac1142c7423318288a80f008c7d9fa1faa318236cc22ac8ce69c88237a4a2f0ad&amp;source=constructor"
-            width="100%" height="600" frameborder="0"></iframe>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac1142c7423318288a80f008c7d9fa1faa318236cc22ac8ce69c88237a4a2f0ad&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>
+    <div id="map">
+
+    </div>
 </div>
 
 <div class="footer">
@@ -423,12 +425,6 @@ session_start();
 </div>
 
 </body>
-
 <script src="src/js/jquery.min.js"></script>
-
-<script>
-
-
-</script>
-
+<script></script>
 </html>
