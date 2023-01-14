@@ -263,7 +263,7 @@ hr{
     width: 50%;
     border: 2px solid #00E0C7;
     border-bottom-width: 0;
-    margin: 0 auto;
+    margin: 60px auto;
 }
 
 div.reasons,
@@ -283,10 +283,12 @@ div.container_map {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 div.reasons h2,
-div.container h2{
+div.container h2,
+div.contacts h2{
     color: #000000;
     font-size: 40px;
     font-family: 'Philosopher',Arial,sans-serif;
@@ -423,9 +425,59 @@ div.container .team .human{
     align-items: center;
 }
 
-div.container .team .human img{
+div.container .reviews{
+    margin: 40px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+div.container .reviews .customer {
+    width: 40%;
+}
+
+div.container .reviews .customer div{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+div.container .reviews .customer div div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 30px;
+}
+
+div.container .team .human img,
+div.container .reviews .customer img{
     border-radius: 50%;
     margin: 10px 0;
+}
+
+div.container .reviews .customer h3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    color: #000000;
+}
+
+div.container .reviews .customer h4{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #777777;
+}
+
+div.container .reviews .customer p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+    color: #000000;
 }
 
 div.container .team .human h3{
@@ -724,6 +776,34 @@ li {
 
 li:hover {
     background: rgba(0, 98, 112, 0.15);
+}
+
+div.contacts{
+    background: #FFFFFF;
+    width: 460px;
+    height: 370px;
+    position: absolute;
+    left: 50px;
+    top: 160px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.contacts h2{
+    text-align: left;
+    margin: 0;
+}
+
+div.contacts p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: black;
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 div.footer{
