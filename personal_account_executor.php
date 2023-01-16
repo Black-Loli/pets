@@ -10,7 +10,7 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
 <head>
     <meta charset="UTF-8">
     <title> Личный кабинет </title>
-    <link rel="stylesheet" href="../src/css/Style.css">
+    <link rel="stylesheet" href="src/css/Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
@@ -44,27 +44,16 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
 
     </div>
     <ul>
-        <li>
-            <p>Заказы</p>
-        </li>
-
-        <li>
-            <p>Карточки питомцев</p>
-        </li>
-
-        <li>
-            <p>Чаты</p>
-        </li>
-
-        <li>
-            <p>Настройки аккаунта</p>
-        </li>
+        <li>Заказы</li>
+        <li>Карточки питомцев</li>
+        <li>Чат с менеджером</li>
+        <li>Настройки аккаунта</li>
     </ul>
 </div>
 
 </body>
 
-<script src="../src/js/jquery.min.js"></script>
+<script src="src/js/jquery.min.js"></script>
 <script>
 
 </script>
