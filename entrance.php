@@ -26,7 +26,7 @@ session_start();
                 </svg>
                 <h1>ПетроЛап</h1>
             </div>
-            <form action="/pages/loginHandler.phper.php" method="post">
+            <form action="loginHandler.php" method="post">
                 <input type="text" name="email_phone" placeholder="Email или телефон" required=""/>
                 <input type="password" name="password" placeholder="Пароль" required="" minlength="6" maxlength="12"/>
                 <h3>

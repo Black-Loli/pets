@@ -68,7 +68,7 @@ div.modal_thanks h2 {
 }
 
 div.modal_thanks h3,
-div.modal_thanks a{
+div.modal_thanks a {
     color: #000000;
     font-size: 22px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -77,11 +77,11 @@ div.modal_thanks a{
     margin: 10px 0;
 }
 
-div.modal_thanks a{
+div.modal_thanks a {
     color: #006270;
 }
 
-div.modal_thanks a:hover{
+div.modal_thanks a:hover {
     color: #00E0C7;
 }
 
@@ -898,9 +898,13 @@ ul {
 }
 
 li {
+    display: flex;
     width: 100%;
-    padding: 30px 0;
+    height: 80px;
     text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 li:hover {
@@ -996,4 +1000,45 @@ div.footer a {
     line-height: 28px;
     color: black;
     margin: 40px 0 50px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.tab-content div.active {
+    display: flex;
+    margin: 150px 0 0 40px;
+    flex-direction: column;
+}
+
+.left_menu input[type="radio"] {
+    display: none;
+}
+
+.tab_selector:checked + .tab_selector_label {
+    padding: 15px 80px 15px 80px;
+    height: 100%;
+    background: rgba(0, 98, 112, 0.15);;
+    border-left: 5px solid #006270;
+}
+
+.tab-content div#student_tab_content.active div.rez h4 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: black;
+    text-indent: 0;
+    padding: 10px;
+}
+
+.tab-content div#student_tab_content.active div.rez h4:hover {
+    color: white;
+    background: black;
+    border-radius: 10px;
+}
+
+.tab-content div.active div.rez {
+    display: flex;
 }
