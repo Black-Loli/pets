@@ -21,7 +21,7 @@ h1, h2 {
 
 div.main {
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,13 +45,14 @@ div.modal {
     width: 50%;
     padding: 40px 40px 30px;
     border-radius: 15px;
-    margin: 10%;
+    margin: 5%;
     background: #FFFFFF;
     border: 1px solid #006270;
     box-shadow: -10px 10px 15px 5px rgba(0, 98, 112, 0.5);
 }
 
 div.modal_thanks {
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +92,7 @@ div.modal_thanks a:hover {
     padding: .4rem .8rem;
 }
 
-input {
+input, select {
     display: flex;
     font-family: 'Philosopher', sans-serif;
     border-radius: 10px;
@@ -134,7 +135,8 @@ button.btn, a.reg, .button_entrance {
 
 button.btn:hover,
 input:hover,
-a.reg:hover {
+a.reg:hover,
+select:hover {
     cursor: pointer;
     background: rgba(0, 98, 112, 0.2);
 }
@@ -146,7 +148,8 @@ a.reg:hover {
 
 input:focus,
 a.reg:focus,
-.button_entrance:focus {
+.button_entrance:focus,
+select:focus {
     box-shadow: 0 0 0.9rem 0.1rem rgba(0, 98, 112, 0.5);
 }
 
@@ -230,10 +233,15 @@ a {
     line-height: 30px;
 }
 
-.navbar .cont_entr .number h5 {
+.navbar .cont_entr .number h5,
+.tab-content .pet_order p{
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+}
+
+.tab-content .pet_order p{
+    margin-left: 10px;
 }
 
 .navbar .cont_entr a {
@@ -812,6 +820,7 @@ div.header .text h1:nth-child(4) {
     background: #00E0C7;
     box-shadow: 10px 10px 15px 5px rgba(0, 98, 112, 0.45);
     z-index: 10;
+    position: fixed;
 }
 
 .d-none {
@@ -861,10 +870,11 @@ div.header .text h1:nth-child(4) {
 
 .left_menu {
     width: 400px;
-    height: 100vh;
+    height: 100%;
     background: #00E0C7;
     box-shadow: 10px 10px 15px 5px rgba(0, 98, 112, 0.45);
     z-index: 5;
+    position: fixed;
 }
 
 .left_menu ul li p {
@@ -1010,7 +1020,7 @@ main {
 
 .tab-content div.active {
     display: flex;
-    margin: 150px 0 0 40px;
+    margin: 120px 0 0 400px;
     flex-direction: column;
 }
 
@@ -1018,14 +1028,38 @@ main {
     display: none;
 }
 
-.tab_selector:checked + .tab_selector_label {
-    padding: 15px 80px 15px 80px;
+.con_selector + .con_selector_label {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.con_selector:checked + .con_selector_label {
     height: 100%;
     background: rgba(0, 98, 112, 0.15);;
     border-left: 5px solid #006270;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.tab-content div#student_tab_content.active div.rez h4 {
+.tab-content {
+    width: 100%;
+    padding: 40px;
+}
+
+.tab-content div.content{
+    display: none;
+}
+
+.tab-content div.content.active{
+    display: flex;
+}
+
+.tab-content div#card_con_content.active div.rez h4 {
     font-size: 20px;
     margin: 10px 0;
     color: black;
@@ -1033,7 +1067,7 @@ main {
     padding: 10px;
 }
 
-.tab-content div#student_tab_content.active div.rez h4:hover {
+.tab-content div#card_con_content.active div.rez h4:hover {
     color: white;
     background: black;
     border-radius: 10px;
@@ -1041,4 +1075,173 @@ main {
 
 .tab-content div.active div.rez {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tab-content div.active div.rez .application {
+    border: 3px solid #006270;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 10px 0;
+}
+
+.tab-content div.active div.pets button,
+.tab-content div.active div.orders button,
+.modal_thanks .order a.modal_thanks_order{
+    float: right;
+    background: #ffffff;
+    border: 2px solid #006270;
+    height: 60px;
+    width: 225px;
+    border-radius: 10px;
+    font-family: 'Philosopher', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 22px;
+    color: #006270;
+    margin-bottom: 30px;
+}
+
+.modal_thanks .order{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.modal_thanks .order a.modal_thanks_order{
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab-content div.active div.pets button:hover,
+.tab-content div.active div.orders button:hover,
+.modal_thanks .order a.modal_thanks_order:hover{
+    background: rgba(0, 224, 199, 0.5);
+}
+
+.tab-content div.active div.pets button:active,
+.tab-content div.active div.orders button:active,
+.modal_thanks .order a.modal_thanks_order:active {
+    background: #00E0C7;
+}
+
+.tab-content div.active div.pets,
+.tab-content div.active div.orders {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.tab-content div.active div.pets .application,
+.tab-content div.active .application {
+    border: 2px solid #006270;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(3, 1fr);*/
+    /*justify-items: center;*/
+    padding: 20px 30px;
+    width: 100%;
+}
+
+.tab-content div.active .application h1 {
+    margin-bottom: 20px;
+}
+
+.tab-content div.active .overlay_modal,
+.tab-content div.active .modal {
+    display: none;
+}
+
+.tab-content div.active .overlay_modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    z-index: 20;
+    border-radius: 0;
+    border: 0;
+    overflow-x: hidden;
+}
+
+.tab-content div.active .modal.active {
+    display: flex;
+    padding: 40px;
+    width: 70%;
+    background: #FFFFFF;
+    border: 1px solid #006270;
+    box-shadow: -10px 10px 15px 5px rgb(0 98 112 / 50%);
+    border-radius: 15px;
+    z-index: 21;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-content div.active .modal.active .modal_header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab-content div.active .modal.active .modal_header svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.tab-content div.active .modal.active .modal_body {
+    width: 80%;
+    margin: 10px 0 0;
+}
+
+.tab-content div.active .modal.active .modal_body button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.application__footer, .application__body {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab-content div.active .application .application__footer h1 {
+    margin: 0;
+}
+
+.tab-content div.active .application .application__footer a {
+    cursor: pointer;
+    color: #757575;
+}
+
+.tab-content div.active .application .application__footer a:hover {
+    color: #006270;
+}
+
+h2.date {
+    margin: 0 auto 20px 10px;
+    color: #757575;
+    font-size: 30px;
 }

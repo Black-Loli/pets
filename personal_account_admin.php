@@ -60,15 +60,15 @@ $applicationQueryResult = $applicationQuery->fetchAll(PDO::FETCH_OBJ);
             </li>
 
             <li>
-                <input type="radio" name="profile_selector" id="student_tab" class="tab_selector" checked>
-                <label for="student_tab" class="tab_selector_label">
+                <input type="radio" name="profile_selector" id="card_con" class="tab_selector" checked>
+                <label for="student_tab" class="con_selector_label">
                     Заявки на звонок
                 </label>
             </li>
 
             <li>
-                <input type="radio" name="profile_selector" id="professor_tab" class="tab_selector">
-                <label for="professor_tab" class="tab_selector_label">
+                <input type="radio" name="profile_selector" id="card_con" class="tab_selector">
+                <label for="professor_tab" class="con_selector_label">
                     Чаты
                 </label>
             </li>
@@ -80,7 +80,7 @@ $applicationQueryResult = $applicationQuery->fetchAll(PDO::FETCH_OBJ);
     </div>
 
     <div class="tab-content">
-        <div id="student_tab_content" class="active">
+        <div id="card_con_content" class="active">
             <div class="rez">
                 <?php
                 foreach ($applicationQueryResult as $application) {
