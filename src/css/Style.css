@@ -1231,7 +1231,8 @@ main {
     margin: 0;
 }
 
-.tab-content div.active .application .application__footer a {
+.tab-content div.active .application .application__footer a,
+.tab-content div.active .application .application__body a{
     cursor: pointer;
     color: #757575;
 }
@@ -1244,4 +1245,19 @@ h2.date {
     margin: 0 auto 20px 10px;
     color: #757575;
     font-size: 30px;
+}
+
+.pet_order_response {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.pet_order_response .btn {
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }

@@ -59,8 +59,7 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
                 <label for="order_con" class="con_selector_label">
                     Мои заказы
                 </label>
-
-                </li>
+            </li>
             <li>
                 <input type="radio" name="profile_selector" id="card_con" class="con_selector">
                 <label for="card_con" class="con_selector_label">
@@ -95,12 +94,12 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
                 /*$addresses = $bd->query("SELECT * FROM Answers LEFT JOIN Pets on Pets.ID = Answers.ID_Pet LEFT JOIN Questions on Questions.ID = Answers.ID_Question WHERE Questions.ID IN (1,2,3) AND Answers.ID_Pet IN (SELECT Pets.ID from Pets WHERE ID_user=$user_id)")->fetchAll(PDO::FETCH_OBJ);
                 $breeds = $bd->query("SELECT * FROM Answers LEFT JOIN Pets on Pets.ID = Answers.ID_Pet LEFT JOIN Questions on Questions.ID = Answers.ID_Question WHERE Questions.ID IN (10,11) AND Answers.ID_Pet IN (SELECT Pets.ID from Pets WHERE ID_user=$user_id)")->fetchAll(PDO::FETCH_OBJ);
                 */
-                foreach ($ordersArray as $singleOrder){
+                foreach ($ordersArray as $singleOrder) {
                     echo "<h2 class='date'> {$singleOrder->DateStart} </h2>";
                     echo "<div class='application'>";
                     echo "<div class='application__body'>";
                     echo "<h1>{$singleOrder->Name} - {$singleOrder->Description}</h1>";
-                    if ($singleOrder->ID_Executor > 0 ) {
+                    if ($singleOrder->ID_Executor > 0) {
                         echo "<h1>Исполнитель назначен</h1>";
                     } else {
                         echo "<h1>Подбор исполнителя</h1>";
@@ -119,7 +118,8 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
                 <div class="modal" id="modal_new_orders">
                     <div class="modal_header">
                         <h1>Новый заказ</h1>
-                        <svg id="modal_close_new_orders" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="modal_close_new_orders" viewBox="0 0 43 43" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M41.3334 1.3335L1.33337 41.3335M1.33342 1.3335L41.3334 41.3335" stroke="#006270"
                                   stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -164,7 +164,7 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
                             <input type="datetime-local" name="DateTimeStart" required=""/>
                             <h1>Дата и время конца услуги</h1>
                             <input type="datetime-local" name="DateTimeEnd" required=""/>
-                            <button type="submit" class="btn"> Заказать </button>
+                            <button type="submit" class="btn"> Заказать</button>
                         </form>
                     </div>
                 </div>
@@ -196,7 +196,7 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
                         WHERE Pets.ID_user = $user_id and Service.ID > 0")->fetchAll(PDO::FETCH_OBJ);
                         $order_question = array();
                         foreach ($data as $element) {
-                            $order_question[$element -> ServiceID][] = $element;
+                            $order_question[$element->ServiceID][] = $element;
                         }
                         foreach ($order_question as $ServiceID => $orders) {
                             echo "<div class='pet_order' id='$ServiceID' style='display: none'>";
@@ -204,7 +204,7 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
 //                            echo "<h1>{$orders[0]->ID_Executor}</h1>";
                             echo "<h1>{$orders[0]->Description} {$orders[0]->TimeStart}</h1>";
                             echo "<h1>{$orders[0]->Name}</h1>";
-                            foreach ($orders as $order){
+                            foreach ($orders as $order) {
                                 echo "<h2>{$order->Text_Question}</h2>";
                                 echo "<h1>{$order->Answer}</h1>";
                             }
@@ -220,8 +220,8 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
             <div class="pets">
                 <button type="button" id="js_modal_open"> Новый питомец</button>
                 <?php
-                    $user_id = $_SESSION['user_id'];
-                    $ordersArray = $bd->query("Select ID_Pet,
+                $user_id = $_SESSION['user_id'];
+                $ordersArray = $bd->query("Select ID_Pet,
                         ID_user,
                         Pets.Name,
                         (SELECT Answer from Answers WHERE ID_Question IN (1, 2, 3) and ID_Pet=Pets.ID LIMIT 1) as address,
@@ -234,7 +234,7 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
                 /*$addresses = $bd->query("SELECT * FROM Answers LEFT JOIN Pets on Pets.ID = Answers.ID_Pet LEFT JOIN Questions on Questions.ID = Answers.ID_Question WHERE Questions.ID IN (1,2,3) AND Answers.ID_Pet IN (SELECT Pets.ID from Pets WHERE ID_user=$user_id)")->fetchAll(PDO::FETCH_OBJ);
                 $breeds = $bd->query("SELECT * FROM Answers LEFT JOIN Pets on Pets.ID = Answers.ID_Pet LEFT JOIN Questions on Questions.ID = Answers.ID_Question WHERE Questions.ID IN (10,11) AND Answers.ID_Pet IN (SELECT Pets.ID from Pets WHERE ID_user=$user_id)")->fetchAll(PDO::FETCH_OBJ);
                 */
-                foreach ($ordersArray as $singleOrder){
+                foreach ($ordersArray as $singleOrder) {
                     echo "<div class='application'>";
                     echo "<h1>{$singleOrder->Name} - {$singleOrder->breed}</h1>";
                     echo "<div class='application__footer'>";
@@ -297,12 +297,12 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
                         WHERE Pets.ID_user = $user_id")->fetchAll(PDO::FETCH_OBJ);
                         $grouped_question = array();
                         foreach ($data as $element) {
-                            $grouped_question[$element -> ID_Pet][] = $element;
+                            $grouped_question[$element->ID_Pet][] = $element;
                         }
                         foreach ($grouped_question as $pet_id => $questions) {
                             echo "<div class='pet_questions' id='$pet_id' style='display: none'>";
                             echo "<h1>{$questions[0]->Name}</h1>";
-                            foreach ($questions as $question){
+                            foreach ($questions as $question) {
                                 echo "<h2>{$question->Text_Question}</h2>";
                                 echo "<h1>{$question->Answer}</h1>";
                             }
@@ -314,21 +314,21 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
                 </div>
             </div>
         </div>
-<!--        <div id="_content">-->
+        <!--        <div id="_content">-->
 
-        </div>
+    </div>
     </div>
 </main>
 </body>
 
 <script src="src/js/jquery.min.js"></script>
 <script>
-    $('#js_modal_open,#overlay_modal,#js_modal_close').click(function(event){
+    $('#js_modal_open,#overlay_modal,#js_modal_close').click(function (event) {
         $('#overlay_modal').toggleClass("active")
         $('#modal_new').toggleClass("active")
     });
 
-    $('#modal_open,#overlay_modal_pet,#modal_close').click(function(event){
+    $('#modal_open,#overlay_modal_pet,#modal_close').click(function (event) {
         console.log($(`.modal_body div#${event.target.dataset.petId}`))
         $('#overlay_modal_pet').toggleClass("active")
         $('#modal').toggleClass("active")
@@ -344,12 +344,12 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
         $('.tab-content').children(`#${event.target.id}_content`).addClass('active');
     });
 
-    $('#modal_open_new_orders,#overlay_modal_new_orders,#modal_close_new_orders').click(function(event){
+    $('#modal_open_new_orders,#overlay_modal_new_orders,#modal_close_new_orders').click(function (event) {
         $('#overlay_modal_new_orders').toggleClass("active")
         $('#modal_new_orders').toggleClass("active")
     });
 
-    $('#modal_open_order,#overlay_modal_order,#modal_close_order').click(function(event){
+    $('#modal_open_order,#overlay_modal_order,#modal_close_order').click(function (event) {
         $('#overlay_modal_order').toggleClass("active")
         $('#modal_order').toggleClass("active")
         if (event.target.id === 'modal_open_order') {

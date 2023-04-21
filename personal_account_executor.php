@@ -57,7 +57,6 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
             <label for="order_con" class="con_selector_label">
                 Заказы
             </label>
-
         </li>
 
         <li>
