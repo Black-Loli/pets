@@ -206,7 +206,8 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
             <div class="modal" id="modal_response_order">
                 <div class="modal_header">
                     <h1>Заказ на питомца</h1>
-                    <svg id="modal_close_response_order" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="modal_close_response_order" viewBox="0 0 43 43" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M41.3334 1.3335L1.33337 41.3335M1.33342 1.3335L41.3334 41.3335" stroke="#006270"
                               stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -258,18 +259,36 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
                    DATE_FORMAT(DATE(DateTimeStart), '%d %M %Y') AS DateStart,
                    DATE_FORMAT(TIME(DateTimeEnd), '%H:%i')      AS TimeEnd,
                    DATE_FORMAT(DATE(DateTimeEnd), '%d %M %Y')   AS DateEnd,
-                   Service.ID                                   as ServiceID
+                   Service.ID                                   as ServiceID,
+                   Order_Status.Description                     as Order_Status,
+                   Type_Service.Description                     as Type_Service
             FROM Service
                      LEFT JOIN Type_Service on Type_Service.ID = Service.Service_Type
                      LEFT JOIN Pets on Pets.ID = Service.ID_Pet
                      LEFT JOIN Executor on Executor.ID = Service.ID_Executor
+                     LEFT JOIN Order_Status on Order_Status.ID = Service.ID_Order_Status
             WHERE Executor.ID_user = $user_id
             ORDER BY DateTimeStart")->fetchAll(PDO::FETCH_OBJ);
 
             foreach ($questionnaire as $questionnairePet) {
                 echo "<h2 class='date'> {$questionnairePet->DateStart} </h2>";
                 echo "<div class='application'>";
-                echo "<h1>{$questionnairePet->Name} - {$questionnairePet->Description}</h1>";
+                echo "<div class='application__body'>";
+                echo "<h1>{$questionnairePet->Name} - {$questionnairePet->Type_Service}</h1>";
+                if ($questionnairePet->ID_Order_Status == 1) {
+                    echo "<form action='/Order_Status_2.php' method='post'>
+                        <input type='hidden' name='ID_Service' required='' value='{$questionnairePet->ServiceID}'>
+                        <input type='submit' name='response' class='btn' required='' value='Начать выполнение'>
+                      </form>";
+                } else if ($questionnairePet->ID_Order_Status == 2) {
+                    echo "<form action='/Order_Status_3.php' method='post'>
+                        <input type='hidden' name='ID_Service' required='' value='{$questionnairePet->ServiceID}'>
+                        <input type='submit' name='response' class='btn' required='' value='Закончить выполнение'>
+                      </form>";
+                } else {
+                    echo "<h1>$questionnairePet->Order_Status</h1>";
+                }
+                echo "</div>";
                 echo "<div class='application__footer'>";
                 echo "<h1>в $questionnairePet->TimeStart, $questionnairePet->Address</h1>";
                 echo "<a id='modal_open_my_order' data-pet-id='{$questionnairePet->ID_Pet}' data-ordermy-id='{$questionnairePet->ServiceID}'>Смотреть подробнее</a>";

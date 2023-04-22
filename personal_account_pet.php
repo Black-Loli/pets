@@ -83,10 +83,13 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
                     DATE_FORMAT(DATE(DateTimeStart), '%d %M %Y') AS DateStart,
                     DATE_FORMAT(TIME(DateTimeEnd), '%H:%i')      AS TimeEnd,
                     DATE_FORMAT(DATE(DateTimeEnd), '%d %M %Y')   AS DateEnd,
-                    Service.ID                                   as ServiceID
+                    Service.ID                                   as ServiceID,
+                    Order_Status.Description                     as Order_Status,
+                    Type_Service.Description                     as Type_Service
                 FROM Service
                     LEFT JOIN Type_Service on Type_Service.ID = Service.Service_Type
                     LEFT JOIN Pets on Pets.ID = Service.ID_Pet
+                    LEFT JOIN Order_Status on Order_Status.ID = Service.ID_Order_Status
                 WHERE Pets.ID_user = $user_id and Service.ID > 0
                 ORDER BY DateTimeStart")->fetchAll(PDO::FETCH_OBJ);
 
@@ -98,9 +101,9 @@ $userQueryResult = $userQuery->fetch(PDO::FETCH_OBJ);
                     echo "<h2 class='date'> {$singleOrder->DateStart} </h2>";
                     echo "<div class='application'>";
                     echo "<div class='application__body'>";
-                    echo "<h1>{$singleOrder->Name} - {$singleOrder->Description}</h1>";
-                    if ($singleOrder->ID_Executor > 0) {
-                        echo "<h1>Исполнитель назначен</h1>";
+                    echo "<h1>{$singleOrder->Name} - {$singleOrder->Type_Service}</h1>";
+                    if ($singleOrder->ID_Order_Status > 0) {
+                        echo "<h1>$singleOrder->Order_Status</h1>";
                     } else {
                         echo "<h1>Подбор исполнителя</h1>";
                     }
